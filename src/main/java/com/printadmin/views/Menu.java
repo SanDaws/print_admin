@@ -28,11 +28,13 @@ public class Menu {
         public void option(int opcion){
             switch (opcion) {
                 case 1:
+                MachineView mv=new MachineView();
+                mv.Menu();
                 
             break;
     
                 case 2:
-
+                RentalView rv=new RentalView();
                 break;
 
             case 5:
