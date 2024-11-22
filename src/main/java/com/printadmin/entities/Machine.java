@@ -43,15 +43,19 @@ public class Machine {
     public void setSn(String sn) {
         this.sn = sn;
     }
-    public String isState() {
+    public String getState() {
         return (state== true)?"Disponible":"Rentado";
     }
     public void setState(boolean state) {
         this.state = state;
     }
+    public boolean isState() {
+        return state;
+    }
     
     @Override
     public String toString() {
-        return "Machine [id=" + id + ", model=" + model + ", sn=" + sn + ", state:" + isState() + "]";
+        return "Machine [id=" + id + ", model=" + model + ", sn=" + sn + ", state:" + getState() + "]";
     }
+
 }

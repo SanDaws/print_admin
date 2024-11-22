@@ -52,7 +52,7 @@ public void setEndDate(LocalDate endDate) {
     this.endDate = endDate;
 }
 
-public String isState() {
+public String getState() {
     return (state==true)?"activo":"desactivado";
 }
 public void setState(boolean state) {
@@ -76,7 +76,7 @@ public void setMachine_id(int machine_id) {
 @Override
 public String toString() {
     return "id=" + id + ", starDate=" + starDate + ", endDate=" + endDate + ", client_id=" + client_id
-            + ", machine_id=" + machine_id + ", state=" + isState() ;
+            + ", machine_id=" + machine_id + ", state=" + getState() ;
 }
 
 
