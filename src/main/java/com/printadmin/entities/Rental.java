@@ -16,10 +16,17 @@ public class Rental {
     
     private Rental(){}
     
-    public Rental(LocalDate starDate, LocalDate endDate, boolean state, int client_id, int machine_id) {//creation
+    public Rental(LocalDate starDate, LocalDate endDate, boolean state, int client_id, int machine_id) {//addition
         this.starDate = starDate;
         this.endDate = endDate;
         this.state = state;
+            this.client_id = client_id;
+            this.machine_id = machine_id;
+        }
+    public Rental(LocalDate starDate, LocalDate endDate, int client_id, int machine_id) {//creation
+        this.starDate = starDate;
+        this.endDate = endDate;
+        this.state = true;
             this.client_id = client_id;
             this.machine_id = machine_id;
         }
@@ -55,6 +62,9 @@ public void setEndDate(LocalDate endDate) {
 public String getState() {
     return (state==true)?"activo":"desactivado";
 }
+public boolean isState() {
+    return state;
+}
 public void setState(boolean state) {
     this.state = state;
 }
@@ -72,14 +82,10 @@ public void setMachine_id(int machine_id) {
 }
 
 
-
 @Override
 public String toString() {
     return "id=" + id + ", starDate=" + starDate + ", endDate=" + endDate + ", client_id=" + client_id
             + ", machine_id=" + machine_id + ", state=" + getState() ;
 }
-
-
-
 
 }

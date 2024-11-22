@@ -12,7 +12,7 @@ import com.printadmin.persistance.db.Dbcontext;
 
 public class MachineDAO {
     private String table= "machines";
-//TODOCreate Machines
+//Create Machines
 public void addMachine(Machine objMachine){
     String query=String.format("INSERT INTO %s(model,sn,state)VALUES(?,?,?);",table);
     try (
@@ -95,5 +95,5 @@ public boolean IsExisting(String serial){
     return isThere;
 
 }
-//TODOimport info from a excel
+
 }

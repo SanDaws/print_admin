@@ -38,9 +38,10 @@ public class RentalDAO {
     public List<Rental> getRentals(boolean  election){//true/false(only active/all)
         String query;
         if (election) {
-            
+            //TODOjoin tables client(email) and machine(sn) names
             query=String.format("SELECT * FROM %s WHERE state = 1;",table);
         }else{
+            //TODOjoin tables client(email) and machine(sn) names
             query=String.format("SELECT * FROM %s ORDER BY state;",table);
         }
         List<Rental> rentals= new ArrayList<>();
@@ -73,9 +74,8 @@ public class RentalDAO {
     
     return rentals;
     }
-
-
-    //update state to true/false(active/disable)
+//update state to true/false(active/disable)
+    //
     public void editRental(int id,boolean bool){
         String alterUserQuery=  String.format("UPDATE %s SET state=? WHERE id=%d",table,id);
         try (
