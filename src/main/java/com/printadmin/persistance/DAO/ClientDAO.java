@@ -11,7 +11,7 @@ import com.printadmin.entities.Client;
 import com.printadmin.persistance.db.Dbcontext;
 
 public class ClientDAO {
-    private String table= "inscriptions";
+    private String table= "clients";
 //create new clients
 public void addClient(Client objClient){
     String query=String.format("INSERT INTO %s(name,last_name,email,dir)VALUES(?,?,?,?);",table);
@@ -51,6 +51,7 @@ public List<Client> GetAllClients(){
             }
         
     } catch (Exception e) {
+        e.printStackTrace();
     }
     return  ListClient;
 }
