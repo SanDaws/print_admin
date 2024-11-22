@@ -1,4 +1,4 @@
-package com.printadmin.persistance;
+package com.printadmin.persistance.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
