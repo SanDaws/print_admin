@@ -23,6 +23,8 @@ public void addClient(Client objClient){
                 statement.setString(2, objClient.getLast_name());
                 statement.setString(3, objClient.getEmail());
                 statement.setString(4, objClient.getDir());
+                
+                statement.executeLargeUpdate();
         
     } catch (Exception e) {
         e.printStackTrace();
