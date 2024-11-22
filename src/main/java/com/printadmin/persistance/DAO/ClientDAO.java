@@ -19,10 +19,10 @@ public void addClient(Client objClient){
             Connection con= Dbcontext.getConeection();
             PreparedStatement statement = con.prepareStatement(query);
             ){
-                statement.setString(1, query);
-                statement.setString(2, query);
-                statement.setString(3, query);
-                statement.setString(4, query);
+                statement.setString(1, objClient.getName());
+                statement.setString(2, objClient.getLast_name());
+                statement.setString(3, objClient.getEmail());
+                statement.setString(4, objClient.getDir());
         
     } catch (Exception e) {
         e.printStackTrace();
