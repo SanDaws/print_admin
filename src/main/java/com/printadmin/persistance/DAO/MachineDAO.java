@@ -57,11 +57,11 @@ public List<Machine> GetAllMachines(){
     return Machines;
 }
 //update state to true/false(avaliable/rented)
-public void editUser(int id,boolean bool){
-    String alterUserQuery=  String.format("UPDATE %s SET state=? WHERE id=%d",table,id);
+public void MachineState(int id,boolean bool){
+    String query=  String.format("UPDATE %s SET state=? WHERE id=%d",table,id);
     try (
         Connection con= Dbcontext.getConeection();
-        PreparedStatement statement = con.prepareStatement(alterUserQuery);
+        PreparedStatement statement = con.prepareStatement(query);
     ){
         statement.setBoolean(1, bool);
         statement.executeLargeUpdate();
