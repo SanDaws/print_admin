@@ -66,7 +66,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "id=" + id + ", name=" + name + ", last_name=" + lastName + ", email=" + email + ", dir=" + dir;
+        return "id: " + id + ", name: " + name + ", last_name: " + lastName + ", email: " + email + ", dir: " + dir;
     }
 
 }
