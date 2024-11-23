@@ -38,7 +38,7 @@ public class MachineView {
         public void option(int opcion){
             switch (opcion) {
                 case 1:
-                
+                importExcel();
             break;
     
                 case 2:
