@@ -64,7 +64,7 @@ public class MachineView {
         String sn= sc.nextLine();
         System.out.print("modelo:");
         String model= sc.nextLine();
-        if (sn =="" || model=="") {
+        if (sn.isEmpty() || model.isEmpty()) {
             return "imposible crear";
             
         }else{
