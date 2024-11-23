@@ -56,6 +56,13 @@ public class Client {
     public void setDir(String dir) {
         this.dir = dir;
     }
+    public boolean CheckEmpty(){
+        return  name == null || name.isEmpty() ||
+               lastName == null || lastName.isEmpty() ||
+               email == null || email.isEmpty() ||
+               dir == null || dir.isEmpty();
+    }
+
 
     @Override
     public String toString() {
