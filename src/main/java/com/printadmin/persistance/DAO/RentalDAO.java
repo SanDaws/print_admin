@@ -14,7 +14,7 @@ import com.printadmin.persistance.db.Dbcontext;
 public class RentalDAO {
     private String table= "rentals";
     //create rental
-    public void addMachine(Rental objRental){
+    public void addRental(Rental objRental){
     String query=String.format("INSERT INTO %s(start_date,end_date,state,clients_id,machines_id)VALUES(?,?,?,?,?);",table);
     try (
             Connection con= Dbcontext.getConeection();
