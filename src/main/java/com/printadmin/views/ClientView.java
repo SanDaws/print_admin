@@ -39,6 +39,7 @@ public class ClientView {
                 break;
         
                     case 2:
+                    ShowClients();
                     
     
                     break;
